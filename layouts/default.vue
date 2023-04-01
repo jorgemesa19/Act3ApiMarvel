@@ -58,7 +58,7 @@ export default {
         {
           icon: 'mdi-newspaper-variant-multiple-outline',
           title: 'Comics',
-          to: '/comics',
+          to: '/comic',
         },
       ],
       miniVariant: false,
@@ -69,3 +69,4 @@ export default {
   },
 }
 </script>
+
