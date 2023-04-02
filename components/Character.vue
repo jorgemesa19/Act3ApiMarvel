@@ -6,24 +6,19 @@
       'url(' + character.thumbnail.path + '.' + character.thumbnail.extension + ')' }">
       </div>
       <div id="nom" class="container-row">
-        <h1 @click="characterData=true">{{character.name}}</h1>
+        <h1 @click="characterData = true">{{character.name}}</h1>
       </div>
     </div>
 
     <div class="modal-body" v-if="characterData" id="modal">
       <div class="container-fluid">
-         <div class="row">
-          <div id="characPic" class="col-md-6" v-bind:style="{ backgroundImage: 'url(' + character.thumbnail.path + '.' + character.thumbnail.extension + ')' }"></div>
-          <div id="modalName" class="col-md-6 ml-auto">{{character.name}}</div>
-        </div>
         <div class="row">
           <div class="col-md-12 sl-auto">{{character.description}} Comics : {{character.comics.available}}</div>
         </div>
-        <div class="row">
+        <div class="row" style="margin: 0px;">
          <div class="col-md-12 ml-auto" 
               v-for="comic in character.comics.items.slice(0, 3)" :key="comic.name">{{comic.name}}</div>
         </div>
-        <div class="col-md-6 ml-auto"></div>
         <div class="modal-footer">
           <button @click="characterData=false" type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         </div>      
@@ -60,38 +55,38 @@ export default {
 .container-col {
   display : flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 #lignes{
-  width:254px;
+  width:250px;
   height:300px; 
-  border-radius: 2%;
+  border-radius: 10px;
 }
 
 #lignes:hover{
     border: 2px solid #e92227;
-
 }
 
 #image {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   background-size: cover;
-  border-radius: 2% 2% 0% 0%;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid rgba(180, 180, 180, 0.781);
 }
 
 #nom {
   background-color:white;
   border: 1px solid rgba(180, 180, 180, 0.781);
-  width: 250px;
-  height: 80px;
-  border-radius: 0% 0% 2% 2%;
+  width: 100%;
+  height: 60px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 
 h1{
   font-size: 20px;
+  height: auto;
   text-align: center;
   color:black;
 }
@@ -109,13 +104,23 @@ h1:hover{
 
 #modal{
   width: 250px;
-  background-color: white;
+  height: auto;
+  font-size: 15px;
+  background-color: #f1f2f0;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px 10px 10px 10px;
 }
 
-#characPic{
-  width: 200px;
-  height: 150px;
-  background-size: cover;
+button {
+  height: auto;
+  width: 100px;
+  background-color: #4796ea;
+  margin-bottom: 5px;
+  align-content: center;
+  text-decoration-color: white;
+  border-radius: 8px;
 }
 
 </style>

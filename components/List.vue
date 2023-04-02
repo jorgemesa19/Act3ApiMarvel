@@ -43,7 +43,7 @@ export default {
 .container-row {
   display : flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .container-wrap {
@@ -56,7 +56,7 @@ export default {
 #liste{
   width: 1050px;
   height: 1600px;
-  margin-top: 50px;
+  margin: 40px;
 }
 
 </style>
