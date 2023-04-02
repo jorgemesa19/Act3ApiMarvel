@@ -1,12 +1,12 @@
 <template>
   <section>
     <div id="lignes" class="container-col">
-      <div id="image" 
+      <div id="image" @click="characterData = true" 
       v-bind:style="{ backgroundImage: 
       'url(' + character.thumbnail.path + '.' + character.thumbnail.extension + ')' }">
       </div>
       <div id="nom" class="container-row">
-        <h1 @click="characterData = true">{{character.name}}</h1>
+        <h1 @click="characterData = false">{{character.name}}</h1>
       </div>
     </div>
 

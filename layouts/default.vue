@@ -1,33 +1,11 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      :absolute="!fixed" app
-      
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-app-bar :clipped-left="clipped" app centered>
-      <v-toolbar-title>{{ title }}</v-toolbar-title>
-    </v-app-bar>
+    <!-- <v-div id="app">
+      <v-div id="nav">
+        <img src="../assets/marvel.png">
+      </v-div>
+      <v-List/>
+    </v-div> -->
 
     <v-main>
       <v-container>
@@ -46,27 +24,29 @@ export default {
   name: 'DefaultLayout',
   data() {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-account-question',
-          title: 'Personajes',
-          to: '/personajes',
-        },
-        {
-          icon: 'mdi-newspaper-variant-multiple-outline',
-          title: 'Comics',
-          to: '/comic',
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
       title: 'MARVEL',
     }
   },
 }
 </script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  background-color: white;
+}
+
+img{
+  width: 100%;
+  height: 300px;
+  size: cover;
+  border: 10px solid white;
+  margin-top: 10px;
+  align-items: center;
+}
+</style>
 
