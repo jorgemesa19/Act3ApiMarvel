@@ -11,15 +11,26 @@
     </div>
 
     <div class="modal-body" v-if="characterData" id="modal">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 sl-auto">{{character.description}} Comics : {{character.comics.available}}</div>
+      <div style="margin: 4px">
+
+        <div>{{character.description}}</div>
+
+        <div style="height: 8px;"></div>
+
+        <div style="color:brown">
+          <div> Comics: {{character.comics.available}}, Series: {{character.series.available}}</div>
+          <div> Historias: {{character.stories.available}}, Eventos: {{character.events.available}}</div>
         </div>
-        <div class="row" style="margin: 0px;">
-         <div class="col-md-12 ml-auto" 
-              v-for="comic in character.comics.items.slice(0, 3)" :key="comic.name">{{comic.name}}</div>
-        </div>
-        <div class="modal-footer">
+
+        <div style="height: 8px;"></div>
+
+        <div >SOME EVENT NAMES:</div>
+
+        <div v-for="serie in character.series.items.slice(0, 3)" :key="serie.name">{{serie.name}} </div>
+
+        <div style="height: 10px;"></div>
+
+        <div>
           <button @click="characterData=false" type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         </div>      
       </div>
@@ -30,7 +41,7 @@
 
 <script>
 export default {
-  name : "Character",
+  name : "Personaje",
   props: {
     character: {
       type: Object,
@@ -55,6 +66,7 @@ export default {
 .container-col {
   display : flex;
   flex-direction: column;
+  margin: 6px;
 }
 
 #lignes{
@@ -79,7 +91,7 @@ export default {
   background-color:white;
   border: 1px solid rgba(180, 180, 180, 0.781);
   width: 100%;
-  height: 60px;
+  height: 80px;
   border-radius: 0px 0px 10px 10px;
 }
 
@@ -100,6 +112,7 @@ h1:hover{
   font-size: 25px;
   text-align: center;
   color:black;
+  height: 80px;
 }
 
 #modal{
@@ -109,7 +122,7 @@ h1:hover{
   background-color: #f1f2f0;
   text-align: center;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-left: 6px;
   border-radius: 10px 10px 10px 10px;
 }
 

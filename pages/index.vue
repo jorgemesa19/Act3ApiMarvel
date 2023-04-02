@@ -6,10 +6,10 @@
 
 
 <script>
-import List from '../components/List'
+import List from '../components/Lista'
 
 export default {
-  name: 'Personaje',
+  name: 'Index',
   components: {
     List
   }

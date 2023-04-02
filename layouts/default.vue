@@ -13,7 +13,7 @@
       </v-container>
     </v-main>
 
-    <v-footer :absolute="fixed" app>
+    <v-footer>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>

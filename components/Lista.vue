@@ -11,10 +11,10 @@
 
 <script>
 import axios from 'axios'
-import Character from '../components/Character'
+import Character from '../components/Personaje'
 
 export default {
-  name: 'List',
+  name: 'Lista',
 
   components: {
     Character
@@ -55,7 +55,7 @@ export default {
 
 #liste{
   width: 1050px;
-  height: 1600px;
+  height: auto;
   margin: 40px;
 }
 
