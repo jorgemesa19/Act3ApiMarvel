@@ -1,5 +1,5 @@
-<template>
-  <section>
+<template >
+  <div>
     <div id="lignes" class="container-col">
       <div id="image" @click="characterData = true" 
       v-bind:style="{ backgroundImage: 
@@ -35,8 +35,7 @@
         </div>      
       </div>
     </div>
-  </section>
-  
+  </div>
 </template>
 
 <script>
